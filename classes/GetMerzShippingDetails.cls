@@ -6,7 +6,6 @@ public with sharing class GetMerzShippingDetails {
         HttpRequest req = new HttpRequest();
         req.setEndpoint('callout:MerzEndpoint?trackingNumber=' + trackingNumber);
         req.setMethod('GET');
-        system.debug('req here ' + req);
 
         try {
             HttpResponse res =  http.send(req);
